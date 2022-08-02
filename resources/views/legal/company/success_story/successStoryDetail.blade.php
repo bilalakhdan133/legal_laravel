@@ -77,57 +77,65 @@
             </div>
          </div>
          <section class="wrapper bg-light mb-10">
-            <!-- <div class="container py-14 py-md-10 text-center">
-               <div class="grid grid-view projects-masonry">
-                  <div class="row gx-md-6 gy-6 isotope" data-cues="slideInDown">
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-11.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-5">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-11.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-12.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-13.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-4.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-4">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-33.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-33.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-33.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="project item col-md-6 col-xl-2">
-                        <figure class="overlay overlay-1 rounded">
-                           <img src="./assets/img/about-us-33.png" alt="" />
-                        </figure>
-                     </div>
-                  </div>
-               </div>
-            </div> -->
+        
+          <div class="container py-14 py-md-10 text-center">
+            <div class="grid grid-view projects-masonry">
+              <div class="row gx-md-6 gy-6 isotope" data-cues="slideInDown">
+                <div class="project item col-md-6 col-xl-4">
+                  <figure class="overlay overlay-1 rounded">
+                    <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-11.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <div class="project item col-md-6 col-xl-4">
+                  <figure class="overlay overlay-1 rounded">
+                  <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-12.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <div class="project item col-md-6 col-xl-4">
+                  <figure class="overlay overlay-1 rounded">
+                  <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-13.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <div class="project item col-md-6 col-xl-8">
+                  <figure class="overlay overlay-1 rounded">
+                  <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-4.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <div class="project item col-md-6 col-xl-4">
+                  <figure class="overlay overlay-1 rounded">
+                  <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-23.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <div class="project item col-md-6 col-xl-4">
+                  <figure class="overlay overlay-1 rounded">
+                  <img 
+                    src="{{ URL::asset('/legal/image/company/about_us/about-us-33.png') }}"
+                    alt="about us image 1"
+                      >
+                  </figure>
+                </div>
+                <!-- /.project -->
+              </div>
+            </div>
+            <!-- /.grid -->
+          </div>
+          <!-- /.container -->
+       
             </div>
          </section>
          <section class="wrapper bg-soft-secondary mb-10">

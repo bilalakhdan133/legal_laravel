@@ -158,7 +158,7 @@
         <div class="row text-left">
           <div class="col-12 ">
             <h3 class="display-36px mb-6 mx-3" style="float: left;">{{ $spTwoCategories[1]->nama_kategori_event }}</h3>
-            <span><a  href="/event/{{ $spTwoCategories[0]->id }}" class="display-20px mx-3 mt-3" >Lihat Semua<i class="uil uil-angle-right-b"></i></a>
+            <span><a  href="/event/{{ $spTwoCategories[1]->id }}" class="display-20px mx-3 mt-3" >Lihat Semua<i class="uil uil-angle-right-b"></i></a>
             </span>
 
           </div>
