@@ -47,8 +47,13 @@
                                  <td>{{ $eve->tanggal_event }}</td>
                                  <td>{{ $eve->kuota_event }} Peserta</td>
                                  <td>
-                                    <div class="d-grid gap-2 d-md-flex">
-                                        <a class="btn btn-primary" href="#">Edit Event</a>
+                                 <div class="gap-2 d-md-flex" >
+                                        <a class="btn btn-success" href="#">Edit Event</a>
+                                          <form action="/delete-event/{{ $eve->id }}" method="post">
+                                             {{method_field('delete')}}
+                                             {{csrf_field()}}
+                                          <button type="submit" class="btn btn-danger">Delete</button>
+                                           </form>
                                     </div>
                                 </td>
                               </tr>

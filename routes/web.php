@@ -97,11 +97,14 @@ Route::get("/login", function () {
 Route::get("/event-crud", [EventController::class, "showEvent"]);
 Route::get("/event-create-page", [EventCategoryController::class, "showEventCategory"]);
 Route::post("/create-event", [EventController::class, "createEvent"]);
+Route::get("/event-detail-edit/{id}", [EventController::class, "showEventDetailEdit"]);
+Route::delete('/delete-event/{id}',[EventController::class,"deleteEvent"]);
+
 // category
 Route::get("/category-crud", [EventCategoryController::class, "showAllCategory"]);
 Route::get("/category-create-page", [EventCategoryController::class, "createCategoryPage"]);
 Route::post("/create-category", [EventCategoryController::class, "createCategory"]);
 Route::get("/category-detail/{id}", [EventCategoryController::class, "showCategoryDetail"]);
 Route::get("/edit-category/{id}", [EventCategoryController::class, "editCategory"]);
-
+Route::delete('/delete-category/{id}',[EventCategoryController::class,"deleteCategory"]);
 

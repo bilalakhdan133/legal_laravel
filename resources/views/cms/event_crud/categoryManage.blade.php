@@ -44,9 +44,15 @@
                                  <td>{{ $cat->nama_kategori_event }}</td>
 
                                  <td>
-                                    <div class="d-grid gap-2 d-md-flex">
-                                        <a class="btn btn-primary" href="/category-detail/{{ $cat->id }}">Edit Category</a>
+                                    <div class="gap-2 d-md-flex" >
+                                        <a class="btn btn-success" href="/category-detail/{{ $cat->id }}">Edit Category</a>
+                                          <form action="/delete-category/{{ $cat->id }}" method="post">
+                                             {{method_field('delete')}}
+                                             {{csrf_field()}}
+                                          <button type="submit" class="btn btn-danger">Delete</button>
+                                           </form>
                                     </div>
+                              
                                 </td>
                               </tr>
                               @endforeach

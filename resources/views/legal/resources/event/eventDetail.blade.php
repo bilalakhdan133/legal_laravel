@@ -1,6 +1,10 @@
 @extends('legal/main') @section('container')
 <div class="content-wrapper">
    <section class="wrapper bg-blue-legal">
+   <div
+            class="wrapper bg-full bg-image"
+            data-image-src="{{ URL::asset('/legal/image/hero-bg.png')}}"
+            >
       <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
          <div class="row">
             <div
@@ -21,6 +25,7 @@
          </div>
          <!-- /.row -->
          <!-- /.container -->
+         </div>
       </div>
    </section>
    <section class="wrapper">

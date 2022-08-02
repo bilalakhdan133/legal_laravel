@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\EventCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -33,7 +36,7 @@ class EventController extends Controller
     // cms
     public function showEvent(){
         $event = Event::all();
-        return view('cms/event_crud/event')->with('events',$event);
+        return view('cms/event_crud/eventManage')->with('events',$event);
     }
 
     public function createEvent(Request $request)
@@ -65,8 +68,9 @@ class EventController extends Controller
                  $destinationPath = '/imageThumbnailEvent/';
 
 
-                //  $nameFile = pathinfo($uploadFile->getClientOriginalName(), PATHINFO_FILENAME);
+                
                  $extensionFile = $uploadFile->getClientOriginalExtension();
+
                  $filename = str_replace(' ', '', $request['NamaEvent']);
 
                  $resultNameFile = time().'-'. $filename.".".$extensionFile;
@@ -93,12 +97,31 @@ class EventController extends Controller
                 $event->save();
                 return redirect('/event-crud');
     }
-    
+
+    public function showEventDetailEdit($id){
+        $eventDetail = Event::findOrFail($id);
+        $eventCategory = EventCategory::all();
+        return view('cms/event_crud/eventEdit', 
+            [
+             'eventCategories' => $eventCategory,   
+             'eventDetails' => $eventDetail
+            ]
+        );
+    }
+
+    public function deleteEvent($id){
+        $event = Event::find($id);
+        $image_path = public_path().$event->thumbnail_event;  
+
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
 
 
-
-
-
+        $event->delete();
+        return redirect('/event-crud');
+    }
+  
     // /**
     //  * Display a listing of the resource.
     //  *

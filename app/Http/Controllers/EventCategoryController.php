@@ -36,7 +36,7 @@ class EventCategoryController extends Controller
     }
     public function showAllCategory(){
         $category = EventCategory::all();
-        return view('cms/event_crud/category')->with('categories',$category);
+        return view('cms/event_crud/categoryManage')->with('categories',$category);
     }
     public function createCategoryPage(){
         return view('cms/event_crud/categoryCreate');
@@ -62,14 +62,29 @@ class EventCategoryController extends Controller
         $catDetail = EventCategory::findOrFail($id);
         return view('cms/event_crud/categoryEdit')->with('categoryDetails', $catDetail);
     }
-    public function editCategory(Request $request){
+    public function editCategory(Request $request)
+    {
         // dd($request->all());
+        // $validator =  $request->validate([
+        //     'NamaCategory' => 'required|regex:/^[a-zA-Z0-9\s]+$/',
+        // ],
+        // [
+        //     'NamaCategory.required' => '* Nama category dibutuhkan',
+        //     'NamaCategory.regex' => '* Hanya huruf dan spasi yang diperbolehkan',
+        // ]);
+
         $category = EventCategory::find($request->id);
         $category->nama_kategori_event = $request->input('NamaCategory');
         $category->save();
 
         return redirect('/category-crud');
 
+    }
+
+    public function deleteCategory($id){
+        $category = EventCategory::find($id);
+        $category->delete();
+        return redirect('/category-crud');
     }
 
 

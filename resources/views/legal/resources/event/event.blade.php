@@ -5,6 +5,10 @@
   <div class="content-wrapper">
 
     <section class="wrapper bg-soft-primary">
+    <div
+            class="wrapper bg-full bg-image"
+            data-image-src="{{ URL::asset('/legal/image/hero-bg.png')}}"
+            >
       <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
         <div class="row">
           <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-auto mx-auto mt-5 mb-10" data-cues="slideInDown" data-group="page-title">
@@ -24,6 +28,7 @@
         </div>
       </div>
       <!-- /.container -->
+      </div>
     </section>
     <!-- /section -->
  
@@ -116,7 +121,7 @@
                             <h5 class="from-top mb-0">Read More</h5>
                           </figcaption>
                         </figure>
-                        <div class="card-body" style="height:300px;">
+                        <div class="card-body" style="height:340px;">
                           <div class="post-header mx-2">
                             <div class="avail mb-2">
                             <span class="badge badge-lg bg-leaf rounded">Kuota Tersedia</span>
@@ -180,7 +185,7 @@
                             <h5 class="from-top mb-0">Read More</h5>
                           </figcaption>
                         </figure>
-                        <div class="card-body" style="height:300px;">
+                        <div class="card-body" style="height:340px;">
                           <div class="post-header mx-2">
                             <div class="avail mb-2">
                             <span class="badge badge-lg bg-leaf rounded">Kuota Tersedia</span>

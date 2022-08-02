@@ -9,7 +9,7 @@
                data-group="page-title"
                >
                <div class="back" style="text-align:left;">
-                  <a href="/event-crud">
+                  <a href="/category-crud">
                      <h5 class="text-white"><i class="uil uil-arrow-left"></i><u>Kembali</u></h5>
                   </a>
                </div>

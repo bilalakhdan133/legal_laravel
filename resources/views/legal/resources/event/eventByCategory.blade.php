@@ -6,11 +6,17 @@
     <div class="content-wrapper">
 
       <section class="wrapper bg-soft-primary">
+      <div
+            class="wrapper bg-full bg-image"
+            data-image-src="{{ URL::asset('/legal/image/hero-bg.png')}}"
+            >
         <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
           <div class="row">
-          <a href="/event">
+          <div class="back" style="text-align:left;">
+               <a href="/event">
                   <h5 class="text-white " ><i class="uil uil-arrow-left"></i><u>Kembali</u></h5>
                </a>   
+               </div>
             <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-auto mx-auto mt-5 mb-10" data-cues="slideInDown" data-group="page-title">
               <h1 class="display-60px mb-4"">Event Legal Analytics</h1>
             
@@ -28,6 +34,7 @@
           </div>
         </div>
         <!-- /.container -->
+        </div>
       </section>
       <!-- /section -->
 
